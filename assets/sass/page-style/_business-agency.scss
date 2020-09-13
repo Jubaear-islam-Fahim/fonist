@@ -1,0 +1,544 @@
+/* 
+    Hero
+*/
+
+.hero-area{
+    @include hero-bg; 
+    padding: 320px 0 220px;
+    position: relative;
+    z-index: 1;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black-4;
+        z-index: -1;
+    }
+}
+
+.hero-text{
+    .hero-title{
+        color: $white;
+        span{
+            color: $green;
+        }
+    }
+    p{ 
+        color: $white;
+        font-size: 25px;
+        line-height: 30px; 
+        font-weight: 400;
+        padding-top: 50px;
+    }
+}
+
+/* 
+    Promo
+*/
+.promo-area{}
+
+.promo-item{
+    background-color: $white; 
+    border-radius: 100%;
+    text-align: center; 
+    width: 280px;
+    height: 280px;
+    padding: 0px 30px; 
+    overflow: hidden;
+    .flaticon{
+        &::before { 
+            font-size: 30px;
+        }
+        color: $green;
+        background-color: $blue;
+        width: 52px;
+        display: inline-block;
+        padding: 20px 0;
+        border-radius: 0px 0 26px 26px; 
+}
+    filter: drop-shadow(0 0 15px $black-6);
+    h4{
+        padding: 25px 0; 
+    }
+    p{}
+}
+
+
+/* 
+    About
+*/
+
+.about-area{} 
+.about-text{
+    p{
+        padding-top: 50px;
+    }
+}
+
+.about-images{
+    position: relative;
+    display: flex;
+    margin: 0 10px;
+    &::before,&::after{
+        content: '';
+        position: absolute;
+        width: 152px;
+        height: 154px;
+        border-radius: 10px;
+        background-color: $blue;
+        z-index: -1;
+    }
+    &::before{
+        right: -9px;
+        top: -25px;
+    }
+    &::after{
+        left: -9px;
+        bottom: -25px;
+    }
+    img{
+        border-radius: 10px;
+        &:nth-child(1),
+        &:nth-child(2){
+            width: 50%;
+            margin: 0 15px;
+            
+        }
+    }
+}
+
+
+/* 
+    Our Skill
+*/
+
+.our-skill-area{
+    .circlechart {
+        text-align: center;
+    }
+    .circle-chart {
+        width: 80%;
+        height: auto;
+        background-color: $bg-color;
+        border-radius: 100%;
+    }
+      
+    .circle-chart__circle {
+        stroke: $green;
+        stroke-width: 1.5;
+        stroke-linecap: square;
+        fill: none;
+        animation: circle-chart-fill 3s reverse; /* 1 */ 
+        transform: rotate(-90deg); /* 2, 3 */
+        transform-origin: center; /* 4 */
+    }
+    
+    
+    .circle-chart__circle--negative {
+        transform: rotate(-90deg) scale(1,-1); /* 1, 2, 3 */
+    }
+    
+    .circle-chart__background {
+        stroke: $blue;
+        stroke-width: 1.5;
+        fill: none; 
+    }
+    
+    .circle-chart__info {
+        animation: circle-chart-appear 3s forwards;
+        opacity: 0;
+        transform: translateY(0.3em);
+    }
+    
+    .circle-chart__percent {
+        alignment-baseline: central;
+        text-anchor: middle;
+        font-size: 8px;
+        font-weight: 700;
+    }
+    
+    .circle-chart__subline {
+        alignment-baseline: central;
+        text-anchor: middle;
+        font-size: 3px;
+        font-weight: 700;
+    }
+    
+    .success-stroke {
+        stroke: $green;
+    }
+    
+    
+    @keyframes circle-chart-fill {
+        to { stroke-dasharray: 0 100; }
+    }
+    
+    @keyframes circle-chart-appear {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    
+    
+}
+
+/* 
+    Services
+*/
+.services-area{
+    background-color: $bg-color;
+}
+
+.services-item{
+    background-color: $White-smoke;
+    padding: 0 35px 40px; 
+    text-align: center; 
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.06));
+    border-radius: 10px;
+    .flaticon{
+        color: $green;
+        background-color: $blue;
+        width: 52px;
+        display: inline-block;
+        padding: 20px 0;
+        border-radius: 0px 0 26px 26px;
+        &::before{
+            font-size: 30px;
+        }
+    }
+    h4{
+        padding: 28px 0px 25px;
+    }
+    p{}
+}
+
+
+/* 
+    Portfolio
+*/
+
+.portfolio-area{}
+
+.portfolio-item-list{
+    text-align: center;
+    padding-bottom: 10px; 
+    .portfolio-filter{
+        background-color: $blue;
+        display: inline-block;
+        margin: 0 auto;
+        border-radius: 5px;
+        padding: 0 5px;
+        li{
+            display: inline-block;
+            font-size: 25px;
+            line-height: 26px;
+            color: $white;
+            font-weight: 400;
+            cursor: pointer;
+            margin: 0 15px;
+            padding: 15px 0;
+        } 
+    }
+}
+
+.portfolio-item{
+    margin-top: 30px;
+    position: relative;
+    img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .portfolio-text{
+        padding: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        display: none;
+        ul{}
+        li{
+            display: inline-block;
+        }
+        a{}
+        h4{}
+        p{}
+    }
+}
+
+
+
+/* 
+    Team
+*/
+
+.team-area{
+    background-color: $bg-color;
+}
+
+.team-item{
+    background-color: $test;
+    border: 3px solid $white;
+    border-radius: 10px;
+    overflow: hidden; 
+    margin-top: 50px;
+    .team-img{
+        border-radius:10px 10px 0 0;
+        overflow: hidden; 
+        border-bottom: 3px solid $white;
+        position: relative;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .team-socle-icon{
+            background: $blue; 
+            position: absolute;
+            bottom: 0;
+            right: 15%;
+            width: 40px; 
+            text-align: center;
+            font-size: 15px;
+            padding: 5px 0;
+            border-radius: 50px 50px 0 0;
+            transform: translateY(100%);
+            li{}
+            a{
+                background-color: $green;
+                color: $blue;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border-radius: 100px;
+                padding: 8px 0; 
+                margin: 0 0 5px;
+            }
+        } 
+        .shear-icon{
+            background: $blue; 
+            position: absolute;
+            bottom: 0;
+            right: 15%;
+            width: 40px; 
+            text-align: center;
+            font-size: 15px;
+            padding: 5px 0;
+            border-radius: 50px 50px 0 0;
+            i{
+                background-color: $green;
+                color: $blue;
+                width: 30px;
+                height: 30px;
+                border-radius: 100px;
+                padding: 8px 0;
+            }
+        }
+    }
+    .team-text{
+        padding: 25px 20px;
+        text-align: center;
+        h4{
+            padding-bottom: 5px;
+        }
+        p{}
+    }
+}
+
+/* 
+    Some Stats
+*/
+.some-stats-area{}
+
+.some-stats-img{
+    img{}
+}
+
+.some-stats-content{
+    .text{
+        padding-top: 50px;
+        p{}
+    }
+}
+
+.sometime-item{
+    background-color: $white;
+    border-radius: 100%;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.06));
+    width: 280px;
+    height: 280px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    .sometime-aa{
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .counter{
+        font-size: 40px;
+        line-height: 30px; 
+        font-weight: 700;
+    }
+    h4{
+        padding: 25px 0 5px;
+    }
+    p{}
+}
+
+/* 
+    Testimonials
+*/
+.testimonials-area{
+    background-color: $bg-color;
+}
+.slider {
+    position: relative;
+    z-index: 200;
+    padding: 0 0px;
+    margin: 5rem auto;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -25px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-family: monospace;
+    font-size: 5rem;
+    z-index: 300;
+    outline: none;
+  }
+  
+  .slick-prev {
+    left: -50px;
+    text-align: left;
+  }
+  
+  .slick-next {
+    right: -50px;
+    text-align: right;
+  }
+  
+  
+  
+  .item.slick-slide {
+    width: 150px;
+    height: 150px !important;
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s;
+    position: relative; 
+    border-radius: 100%;
+  }
+  
+  .slick-slide:after {
+    content:'';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s;
+  }
+  
+  .item.slick-slide {
+    -webkit-transform: scale(0.7)  translate(640px);
+            transform: scale(0.7)  translate(640px);
+  }
+  
+  .item.slick-slide.slick-center + .slick-slide {
+    -webkit-transform: scale(0.8) translate(-290px);
+            transform: scale(0.8) translate(-290px);
+    z-index: 10;
+  }
+  
+  .item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
+    -webkit-transform: scale(0.7)  translate(-640px);
+            transform: scale(0.7)  translate(-640px);
+    z-index: 5;
+  }
+  
+  .item.slick-slide.slick-active {
+    -webkit-transform: scale(0.8) translate(290px);
+            transform: scale(0.8) translate(290px);
+  }
+  
+  .item.slick-slide.slick-center {
+    /* margin: 0 -10%; */
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    z-index: 30;
+  }
+  
+
+/* 
+    News
+*/
+.news-area{}
+.news-item{
+    background-color: $white;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.06));
+}
+.news-img{
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+.admin-time{ 
+    padding: 15px 25px;
+    border-bottom: 1px solid #43348a;
+    .admin{
+        display: inline-block;
+        img{}
+    }
+    .time{
+        display: inline-block;
+        float: right;
+        padding: 10px 0;
+        i{}
+    }
+}
+.news-title{
+    padding: 20px 25px;
+    .title{
+        font-size: 25px;
+        line-height: 30px; 
+        font-weight: 700;
+    }
+    .news-footer{
+        .btn{}
+        .news-socle-icon{
+            li{}
+            a{}
+            .shear-icon{}
+        }
+    }
+}
+
+
+
+/* 
+
+*/

@@ -1,4 +1,50 @@
+/*=========================================================
+[Master Stylesheet]
+
+Template Name: Saasbox - Bootstrap 5 Multipurpose HTML Template for Saas & Agency
+Template Author: Codex Expert
+Template Author URL: https://themeforest.net/user/designing-world
+Version: 1.5.0
+========================================================== */
+/*=========================================================
+[Table of Contents]
+    * Google Fonts
+     
+
+# [font-family]
+'Yantramanav', sans-serif;
+========================================================== */
+
+/*=========================================================
+		Import Fonts & All CSS Files
+=========================================================*/
+
+/* 
+    Foundation
+*/
+@import 'foundation/library', 'foundation/mixin';
+
+/* 
+    Google Fonts
+*/
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500;700;900&display=swap');
+ 
+
+/*Animate, Font Awesome, Bootstrap*/
+@import '../css/bundle.min.css';
+
+/*FlatIcon*/
+@import '../font/flaticon.css'; 
+
+/*Slick Slider*/
+@import'../css/slick.min.css';
+
 @import 'helper';
+
 @import 'header'; 
-@import 'content';
+
+@import 'nav'; 
+
+@import './page-style/business-agency'; 
+
 @import 'footer'; 

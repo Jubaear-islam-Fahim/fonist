@@ -1,1 +1,81 @@
- 
+/* 
+    nav top 
+*/
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+.header-top{
+    padding: 10px 0;
+    border-bottom: 1px solid $blue;
+}
+
+.header-col{
+    align-self: center;
+}
+
+.header-address{
+    .address-blog{
+        display: inline-block;
+        margin-right: 40px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $white;
+        &::before{
+            content: "\f3c5";
+            @include icon-font;
+            color: $green;
+        }
+    }
+    .phone-blog{
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        color: $white;
+        &::before{
+            content: "\f879";
+            @include icon-font;
+            color: $green;
+        }
+    }
+}
+.header-socle{
+    float: right;
+    display: flex;
+    .follow-txt{
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 30px;
+        align-self: center;
+        color: $white;
+    }
+    .socle-icon{
+        li{
+            display: inline-block; 
+            position: relative;
+            padding: 7px 0;
+            width: 43px;
+            &:after{ 
+                content:'';
+                position: absolute;
+                right: 0;
+                top:0;
+                width: 2px;
+                height: 100%;
+                background-image: linear-gradient(0deg, #746961 0%, #5cd901 50%, #6e6155 100%);
+            }
+        }
+        a{
+            font-size: 20px;
+            padding: 0 10px;
+            color: $green;
+            transition: all .3s;
+            
+            &:hover{
+                color: $blue;
+            }
+        }
+    }
+}

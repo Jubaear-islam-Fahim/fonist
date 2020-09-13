@@ -1,0 +1,25 @@
+
+/* google fonts */
+@mixin primary-font {
+    font-family: 'Yantramanav', sans-serif;
+}
+
+/* background qu */
+@mixin bg-prs {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Font Awesome */
+@mixin icon-font{
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+/* background images */
+@mixin hero-bg {
+    background-image: url(../img/h1.jpg);
+    @include bg-prs;
+}
